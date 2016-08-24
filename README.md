@@ -4,5 +4,30 @@ Angular CLI starter project updated to rc.5. Current `ng new` installs rc.4, whi
 ## Install
 `npm install` (Mac requires `sudo npm install`).
 
+If you want to change the prefix from the default `app` you'll need to make three changes:
+
+1. In `angular-cli.json` change the `defaults.prefix` key to your new prefix:
+
+```
+"defaults": {
+    "prefix": "myprefix",
+    ...
+```
+
+2. In `src/app/component.ts` change the component selector from `app-root` to `myprefix-root`:
+
+```
+@Component({
+  moduleId: module.id,
+  selector: 'myprefix-root',
+  ...
+```
+
+3. In `index.html` update the directive:
+
+```
+<myprefix-root>Loading...</myprefix-root>
+```
+
 ## Run
 `npm start` or `ng serve`
