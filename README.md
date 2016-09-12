@@ -1,33 +1,4 @@
 # angular2_rc5_quickstart
-Angular CLI starter project updated to rc.5. Current `ng new` installs rc.4, which is pre-`ngModule`. This is just a stop-gap starter until the CLI is updated or gets a flag to install with rc.5 (or obviously until Angular 2 is released). The primary changes are outlined [here in the official Angular docs](https://angular.io/docs/ts/latest/cookbook/rc4-to-rc5.html).
 
-## Install
-`npm install` (Mac requires `sudo npm install`).
-
-If you want to change the prefix from the default `app` you'll need to make three changes:
-
-1. In `angular-cli.json` change the `defaults.prefix` key to your new prefix:
-
-```
-"defaults": {
-    "prefix": "myprefix",
-    ...
-```
-
-2. In `src/app/component.ts` change the component selector from `app-root` to `myprefix-root`:
-
-```
-@Component({
-  moduleId: module.id,
-  selector: 'myprefix-root',
-  ...
-```
-
-3. In `index.html` update the directive:
-
-```
-<myprefix-root>Loading...</myprefix-root>
-```
-
-## Run
-`npm start` or `ng serve`
+__IMPORTANT NOTE:__
+There is now a CLI that uses webpack and installs rc.5, making this repo unnecessary. See a good write-up on installing and using [here](https://www.barbarianmeetscoding.com/blog/2016/08/24/angular-2-cli-bootstrap-your-angular-2-app-in-a-breeze/). You'll need Node 6.5.0 installed or you'll get console errors galore (as of this writing the CLI docs incorrectly state Node 4 or greater). Also, if you install the CLI globally under another version of Node and then switch to 6.5.0 you'll need to install it again under 6.5.0.
